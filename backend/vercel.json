@@ -2,11 +2,11 @@
     "version": 2,
     "builds": [
       {
-        "src": "server.js",
+        "src": "backend/server.js",
         "use": "@vercel/node"
       },
       {
-        "src": "src/**/*",
+        "src": "frontend/src/**/*",
         "use": "@vercel/static"
       }
     ],
@@ -14,16 +14,16 @@
       {
         "src": "/api/users",
         "methods": ["POST", "GET"],
-        "dest": "server.js"
+        "dest": "backend/server.js"
       },
       {
         "src": "/api/users/:id",
         "methods": ["DELETE", "GET", "PATCH"],
-        "dest": "server.js"
+        "dest": "backend/server.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "frontend/src/index.html"
       }
     ]
   }
