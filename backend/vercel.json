@@ -1,4 +1,3 @@
-
 {
     "version": 2,
     "builds": [
@@ -14,7 +13,7 @@
     "routes": [
       {
         "src": "/api/users",
-        "methods": ["POST"],
+        "methods": ["POST", "GET"],
         "dest": "server.js"
       },
       {
@@ -23,20 +22,7 @@
         "dest": "server.js"
       },
       {
-        "src": "/api/users",
-        "methods": ["GET"],
-        "dest": "server.js"
-      },
-      {
-        "src": "/",
-        "dest": "/index.html"
-      },
-      {
-        "src": "/all",
-        "dest": "/index.html"
-      },
-      {
-        "src": "/:id",
+        "src": "/(.*)",
         "dest": "/index.html"
       }
     ]
